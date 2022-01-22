@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# 鼠标顺滑
+imwhell
+
+# 设置壁纸
+feh --bg-fill ~/Pictures/Wallpapers/yoona.jpeg
+
+# 开启代理
+clash

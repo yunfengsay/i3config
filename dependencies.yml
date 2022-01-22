@@ -1,0 +1,59 @@
+i3blocks:
+  wifi:
+    - NetworkManager (nmcli, nmtui)
+  temperature:
+    - sensors
+  bluetooth:
+    - bluez
+    - blueberry
+  brightness:
+    - light
+    - bc
+  cpu_usage:
+    - sysstat
+  battery:
+    - acpi
+  playerctl:
+    - playerctl
+  window:
+    - xdotool
+  weather:
+    - wget
+  
+i3:
+  - i3-gaps
+  - i3blocks
+  - picom
+  - dmenu
+  - quickswitch-i3
+  - xfce4-appfinder (appmenu)
+  - xfce4-terminal
+  - nitrogen (wallpaper)
+  - xfce4-notifyd (system notification)
+  - lxappearance-gtk3
+  - arandr
+
+DM:
+  - lightdm
+  - lightdm-gtk-greeter
+  - light-locker
+ 
+clipboard:
+  - xfce4-clipman-plugin
+
+power saving:
+  - xfce4-power-manager
+
+other apps:
+  - deepin-screenshot
+  - thunar (with thunar-volman, gvfs,thunar-media-tags-plugin ,thunar-archive-plugin, file-roller)
+  - fcitx (with fcitx-rime, fcitx-ui-light, fcitx-configtool)
+
+fonts:
+  - Titillium
+  - fontawesome5
+  - FiraCode Nerd Font
+  - wqy-microhei
+
+
+find WM: xprop|grep WM_CLASS
