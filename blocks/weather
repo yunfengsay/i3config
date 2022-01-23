@@ -1,24 +1,24 @@
 #!/bin/bash
 # Based on http://openweathermap.org/current
 
-API_KEY="5604f6d4ba8753c632e3f440bcbbc8fc"
+API_KEY="ff58728d530d00639639117b5af6e072"
 
 # Check on http://openweathermap.org/find
-CITY_ID="${BLOCK_INSTANCE}"
+CITY_ID="Hangzhou"
 
 URGENT_LOWER=0
 URGENT_HIGHER=30
 
-ICON_SUNNY=""
-ICON_CLOUDY=""
-ICON_RAINY=""
-ICON_STORM=""
-ICON_SNOW=""
-ICON_FOG=""
+ICON_SUNNY="晴"
+ICON_CLOUDY="云"
+ICON_RAINY="雨"
+ICON_STORM="风暴"
+ICON_SNOW="雪"
+ICON_FOG="雾"
 
 SYMBOL_CELSIUS="°C"
 
-WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&appid=${API_KEY}&units=metric"
+WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?q=${CITY_ID}&appid=${API_KEY}&units=metric"
 
 WEATHER_INFO=$(wget -qO- "${WEATHER_URL}")
 WEATHER_MAIN=$(echo "${WEATHER_INFO}" | grep -o -e '\"main\":\"[a-Z]*\"' | awk -F ':' '{print $2}' | tr -d '"')
